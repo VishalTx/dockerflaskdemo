@@ -23,6 +23,6 @@ steps:
 #   - '--allow-unauthenticated'
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: gcloud
-  args: ['run', 'deploy', 'cloudrunservice', '--image', 'gcr.io/pratik-333004/hello-app', '--region', 'us-central1']
+  args: ['run', 'deploy', 'cloudrunservice', '--image', 'gcr.io/[name]/hello-app', '--region', 'us-central1']
 images:
-  - 'gcr.io/pratik-333004/hello-app'
+  - 'gcr.io/[imagenme]'

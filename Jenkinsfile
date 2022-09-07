@@ -1,6 +1,7 @@
 stage('Docker Nexus Auth'){
-sh 'docker login -u admin -p admin http://54.211.71.95:8085/'
+sh 'docker login -u admin -p admin http://54.211.71.95:8083/'
 }
+
 stage('Push Docker Images to Nexus Registry'){
 sh 'docker push http://54.211.71.95:8081/repository/demoimg//DepImg}'
 sh 'docker rmi $(docker images --filter=reference="http://54.211.71.95:8081/repository/demoimg//DepImg*" -q)'

@@ -9,7 +9,7 @@ pipeline{
   stages{
     stage('checkout'){
       steps{
-         checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/VishalTx/dockerflaskdemo.git']]])
+         checkout([$class: 'GitSCM', branches: [[name: '**']], extensions: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/VishalTx/dockerflaskdemo.git']]])
       }
     }
     stage('Build image') {

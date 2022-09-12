@@ -2,7 +2,7 @@ pipeline{
   agent any
   environment {
         imageName = "docker-image"
-        registryCredentials = "nexus"
+        registryCredentials = "admin"
         registry = "http://54.165.226.72:8085/"
         dockerImage = ''
     }

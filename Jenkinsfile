@@ -19,5 +19,14 @@ pipeline{
         }
       }
     }
+    stage('Uploading to Nexus') {
+     steps{  
+         script {
+             docker.withRegistry( 'http://44.202.141.94:8081 ) {
+             dockerImage.push('latest')
+          }
+        }
+      }
+    }
   }
 }

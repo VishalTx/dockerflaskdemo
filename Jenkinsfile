@@ -3,7 +3,7 @@ pipeline{
   environment {
         imageName = "docker-image"
         registryCredentials = "nexus"
-        registry = "http://54.165.226.72:8085/"
+        registry = "http://3.82.121.146:8085/"
         dockerImage = ''
     }
   stages{
@@ -15,7 +15,7 @@ pipeline{
     stage('Build image') {
       steps{
         script{
-               dockerImage = docker.build imageName
+               dockerImage = docker.build ("getintodevops/hellonode")
         
       }
     }

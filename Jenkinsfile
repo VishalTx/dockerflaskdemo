@@ -28,12 +28,6 @@ pipeline{
         }
       }
     }
-     stage('Pre Prod.') {
-     steps{  
-         script {
-             sh ' docker run -it -d -p 9090:9090 --name demo 54.89.139.197:9090/docker-image'
-        }
-      }
-    }
+     
   }
 }

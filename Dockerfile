@@ -13,7 +13,7 @@ ENV PATH=$CONDA_DIR/bin:$PATH
 # Install any necessary dependencies
 RUN pip3 install -r requirements.txt
 RUN conda install -c anaconda pandas
-# Open port 8080 for serving the webpage
+# Open port 9090 for serving the webpage
 EXPOSE 9090
 
 # Run app.py when the container launches

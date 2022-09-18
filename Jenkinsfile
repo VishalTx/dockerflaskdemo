@@ -28,6 +28,13 @@ pipeline{
         }
       }
     }
+    stage('Pre Prod..') {
+     steps{  
+         script {
+             sh 'python3 app.py'
+        }
+      }
+    }
      
   }
 }

@@ -7,8 +7,9 @@ app = Flask(__name__)
 # app.config["Debug"] = True
 
 @app.route('/')
-def mydef():
-    return "hello page this is python app"
+def hello():
+    return render_template('index.html')
+
 if __name__ == '__main__':
     app.run()
 
